@@ -1,0 +1,26 @@
+* Sagebow Application Diagrams And Displays
+** Use Cases
+*** Goal
+   Identify the main use cases including actors.
+
+** Sequence Diagrams
+*** Goal
+   Describe the different sequence diagrams that can occur for at least 
+   three use cases.
+   
+** Class Diagrams
+*** Goal
+   Provide the design class diagrams of the project by giving the 
+   snapchats of the artifacts with descriptions (Each main 
+   class should be described)
+   
+** Gantt Chart
+*** Goal 
+   Provide the Gantt chart including the different project-steps.
+   (With deadlines).
+
+** Presentation
+*** Goal 
+   Prepare a presentation (slides) of 15 minutes to give an overview
+   of our projects including the above diagrams. The group members
+   will present slides during the lecture of 10/26/2016.
