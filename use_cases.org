@@ -57,13 +57,14 @@
 ***** .. If data is found
 ****** ... Send JSON from API back to frontend.
 ****** ... Fill out the nutritional data automatically, allow user input food entry.
+****** ... User would now be free to proceed to Use Case 4.
 ***** .. If data is not found
 ****** ... Send error code of not found back to frontend.
 ****** ... Display a modal window, telling user entry was not found on API.
 
 * Use Case 4
 ** Name Of Use Case
-   User attempts to use autofill on a food entry.
+   User attempts to use recent food entry to fill out new food.
 ** Actors 
 *** User ("User")
 *** Sagebow Front-End ("Frontend")
@@ -73,19 +74,12 @@
 ** Description
 *** Steps
 **** . Authenticated user navigates to food-entry tab.
-**** . User fills out form data stating food that was eaten.
-**** . User presses auto-fill
-**** . Frontend sends a request the the backend requesting data from API proxy.
-**** . Backend attempts to find JSON for query parameters pass from front-end on API.
-***** .. If data is found
-****** ... Send JSON from API back to frontend.
-****** ... Fill out the nutritional data automatically, allow user input food entry.
-***** .. If data is not found
-****** ... Send error code of not found back to frontend.
-****** ... Display a modal window, telling user entry was not found on API.
+**** . User clicks recent entry located in a sidebar.
+**** . Frontend sends a request the the backend requesting data from recent entry.
+**** . Backend will inebietly find item, will perform autofill in similar fashion to use case  3.
+**** . User would now be free to proceed to Use Case 4.
 
-
-* Use Case 4
+* Use Case 5
 ** Name Of Use Case
    User inputs a food entry.
 ** Actors 
@@ -104,7 +98,7 @@
 ***** .. If they do, push the instantiated model to the database.
 ***** .. Otherwise, send an internal server error back to the frontend.
 
-* Use Case 5
+* Use Case 6
 ** Name Of Use Case
    User deletes his/her account.
 ** Actors 
@@ -122,7 +116,7 @@
 ****** ... The user is redirected to the login page and deauthenticated.
 ***** .. Otherwise, a modal window is displayed showing improper authentication.
 
-* Use Case 6
+* Use Case 7
 ** Name Of Use Case
    User wishes to view statistics.
 ** Actors 
@@ -135,7 +129,7 @@
 **** . Authenticated user navigates to metrics page.
 **** . Display all nutritional data in current time span.
 
-* Use Case 7
+* Use Case 8
 ** Name Of Use Case
    User wishes to modify statistics range.
 ** Actors 
@@ -150,7 +144,7 @@
 **** . User presses assorted dropdown regarding type of metrics or date range.
 **** . The frontend requeries for data from the backend and rerenders all charts.
 
-* Use Case 8
+* Use Case 9
 ** Name Of Use Case
    User wishes to modify fitness goals.
 ** Actors 
@@ -167,7 +161,7 @@
 ***** .. In case that data is good, update user object.
 ***** .. Otherwise send error code back to front end which then prompts a modal display.
 
-* Use Case 9
+* Use Case 10
 ** Name Of Use Case
    User wishes to enter current weight
 ** Actors 
