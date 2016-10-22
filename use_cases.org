@@ -60,3 +60,124 @@
 ***** .. If data is not found
 ****** ... Send error code of not found back to frontend.
 ****** ... Display a modal window, telling user entry was not found on API.
+
+* Use Case 4
+** Name Of Use Case
+   User attempts to use autofill on a food entry.
+** Actors 
+*** User ("User")
+*** Sagebow Front-End ("Frontend")
+*** Sagebow Back-End ("Backend")
+*** In-Memory Redis Cache ("Database")
+*** USDA Food Composition Database ("API")
+** Description
+*** Steps
+**** . Authenticated user navigates to food-entry tab.
+**** . User fills out form data stating food that was eaten.
+**** . User presses auto-fill
+**** . Frontend sends a request the the backend requesting data from API proxy.
+**** . Backend attempts to find JSON for query parameters pass from front-end on API.
+***** .. If data is found
+****** ... Send JSON from API back to frontend.
+****** ... Fill out the nutritional data automatically, allow user input food entry.
+***** .. If data is not found
+****** ... Send error code of not found back to frontend.
+****** ... Display a modal window, telling user entry was not found on API.
+
+
+* Use Case 4
+** Name Of Use Case
+   User inputs a food entry.
+** Actors 
+*** User ("User")
+*** Sagebow Front-End ("Frontend")
+*** Sagebow Back-End ("Backend")
+*** In-Memory Redis Cache ("Database")
+** Description
+*** Steps
+**** . Authenticated user navigates to food-entry tab.
+**** . User fills out form data stating food that was eaten.
+**** . User *also* fills out form data stating food nutrients.
+**** . Frontend ensures all necessary forms are filled
+**** . Frontend dispatches data as JSON to backend.
+**** . Backend yet again ensures all neccessary fields exist
+***** .. If they do, push the instantiated model to the database.
+***** .. Otherwise, send an internal server error back to the frontend.
+
+* Use Case 5
+** Name Of Use Case
+   User deletes his/her account.
+** Actors 
+*** User ("User")
+*** Sagebow Front-End ("Frontend")
+*** Sagebow Back-End ("Backend")
+*** In-Memory Redis Cache ("Database")
+** Description
+*** Steps
+**** . Authenticated user navigates to account settings.
+**** . User presses "delete account"
+**** . Frontend uses modal to prompt user to reenter data.
+**** . Frontend does similar procedure to login authentication.
+***** .. If the user provides correct data, the users data is purged from the server.
+****** ... The user is redirected to the login page and deauthenticated.
+***** .. Otherwise, a modal window is displayed showing improper authentication.
+
+* Use Case 6
+** Name Of Use Case
+   User wishes to view statistics.
+** Actors 
+*** User ("User")
+*** Sagebow Front-End ("Frontend")
+*** Sagebow Back-End ("Backend")
+*** In-Memory Redis Cache ("Database")
+** Description
+*** Steps
+**** . Authenticated user navigates to metrics page.
+**** . Display all nutritional data in current time span.
+
+* Use Case 7
+** Name Of Use Case
+   User wishes to modify statistics range.
+** Actors 
+*** User ("User")
+*** Sagebow Front-End ("Frontend")
+*** Sagebow Back-End ("Backend")
+*** In-Memory Redis Cache ("Database")
+** Description
+*** Steps
+**** . Authenticated user navigates to metrics page.
+**** . All nutritional data for the default date range is displayed.
+**** . User presses assorted dropdown regarding type of metrics or date range.
+**** . The frontend requeries for data from the backend and rerenders all charts.
+
+* Use Case 8
+** Name Of Use Case
+   User wishes to modify fitness goals.
+** Actors 
+*** User ("User")
+*** Sagebow Front-End ("Frontend")
+*** Sagebow Back-End ("Backend")
+*** In-Memory Redis Cache ("Database")
+** Description
+*** Steps
+**** . Authenticated user navigates to settings page.
+**** . User navigates to goals subtab.
+**** . User enters proper data to his/her macro and caloric nutrient values.
+**** . Frontend sends to backend, which sanitizes data.
+***** .. In case that data is good, update user object.
+***** .. Otherwise send error code back to front end which then prompts a modal display.
+
+* Use Case 9
+** Name Of Use Case
+   User wishes to enter current weight
+** Actors 
+*** User ("User")
+*** Sagebow Front-End ("Frontend")
+*** Sagebow Back-End ("Backend")
+*** In-Memory Redis Cache ("Database")
+** Description
+*** Steps
+**** . Authenticated user navigates to entry page.
+**** . User enters into HTML5 number form current weight.
+**** . Data is autosanitized, send to backend and entered into the user object.
+
