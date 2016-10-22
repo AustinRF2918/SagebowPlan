@@ -8,11 +8,11 @@
    In-Memory Redis Cache ("Database")
 ** Description
 *** Steps
-**** User attempts to login to his/her Sagebow account.
-**** User enters form information when on login URL.
-**** Frontend sends encrypted data to the backend, 
-**** Backend queries the database for a username
-**** If found, a hash algorithm is ran against the password to check for matching credentials.
+**** . User attempts to login to his/her Sagebow account.
+**** . User enters form information when on login URL.
+**** . Frontend sends encrypted data to the backend, 
+**** . Backend queries the database for a username
+**** . If found, a hash algorithm is ran against the password to check for matching credentials.
 
 * Use Case 2
 ** Name Of Use Case
@@ -24,19 +24,19 @@
    In-Memory Redis Cache ("Database")
 ** Description
 *** Steps
-**** Unauthenticated user navigates from login route to signup route.
-**** User fills out forms with valid or invalid information.
-**** Frontend simultaneously runs regex to check for valid credentials.
-**** The user may at any time attempt to press the "Create account" button.
-**** Once create account is ran...
-***** The frontend checks for failed regexes
-***** The backend checks for bad data (also via regex)
-***** The backend also checks if the user's credentials already exist.
-***** If any of these checks fail, the backend sends a message to the frontend telling it to display a modal window.
-**** If all of these checks pass
-***** The backend allocates a new spot in the database for the user.
-***** A message is sent to display a success modal window.
-**** On closing of the modal window, the user is redirect to the login.
+**** . Unauthenticated user navigates from login route to signup route.
+**** . User fills out forms with valid or invalid information.
+**** . Frontend simultaneously runs regex to check for valid credentials.
+**** . The user may at any time attempt to press the "Create account" button.
+**** . Once create account is ran...
+***** .. The frontend checks for failed regexes
+***** .. The backend checks for bad data (also via regex)
+***** .. The backend also checks if the user's credentials already exist.
+***** .. If any of these checks fail, the backend sends a message to the frontend telling it to display a modal window.
+**** . If all of these checks pass
+***** .. The backend allocates a new spot in the database for the user.
+***** .. A message is sent to display a success modal window.
+**** . On closing of the modal window, the user is redirect to the login.
 
 * Use Case 3
 ** Name Of Use Case
@@ -49,14 +49,14 @@
    USDA Food Composition Database ("API")
 ** Description
 *** Steps
-**** Authenticated user navigates to food-entry tab.
-**** User fills out form data stating food that was eaten.
-**** User presses auto-fill
-**** Frontend sends a request the the backend requesting data from API proxy.
-**** Backend attempts to find JSON for query parameters pass from front-end on API.
-***** If data is found
-****** Send JSON from API back to frontend.
-****** Fill out the nutritional data automatically, allow user input food entry.
-***** If data is not found
-****** Send error code of not found back to frontend.
-****** Display a modal window, telling user entry was not found on API.
+**** . Authenticated user navigates to food-entry tab.
+**** . User fills out form data stating food that was eaten.
+**** . User presses auto-fill
+**** . Frontend sends a request the the backend requesting data from API proxy.
+**** . Backend attempts to find JSON for query parameters pass from front-end on API.
+***** .. If data is found
+****** ... Send JSON from API back to frontend.
+****** ... Fill out the nutritional data automatically, allow user input food entry.
+***** .. If data is not found
+****** ... Send error code of not found back to frontend.
+****** ... Display a modal window, telling user entry was not found on API.
