@@ -2,10 +2,10 @@
 ** Name Of Use Case
    User attempts to login
 ** Actors 
-   User ("User")
-   Sagebow Front-End ("Frontend")
-   Sagebow Back-End ("Backend")
-   In-Memory Redis Cache ("Database")
+   User ("User") \\
+   Sagebow Front-End ("Frontend") \\
+   Sagebow Back-End ("Backend") \\
+   In-Memory Redis Cache ("Database") \\
 ** Description
 *** Steps
 **** . User attempts to login to his/her Sagebow account.
@@ -18,10 +18,10 @@
 ** Name Of Use Case
    User attempts to create account
 ** Actors 
-   User ("User")
-   Sagebow Front-End ("Frontend")
-   Sagebow Back-End ("Backend")
-   In-Memory Redis Cache ("Database")
+   User ("User") \\
+   Sagebow Front-End ("Frontend") \\
+   Sagebow Back-End ("Backend") \\
+   In-Memory Redis Cache ("Database") \\
 ** Description
 *** Steps
 **** . Unauthenticated user navigates from login route to signup route.
@@ -43,10 +43,10 @@
    User attempts to use autofill on a food entry.
 ** Actors 
    User ("User")
-   Sagebow Front-End ("Frontend")
-   Sagebow Back-End ("Backend")
-   In-Memory Redis Cache ("Database")
-   USDA Food Composition Database ("API")
+   Sagebow Front-End ("Frontend") \\
+   Sagebow Back-End ("Backend") \\
+   In-Memory Redis Cache ("Database") \\
+   USDA Food Composition Database ("API") \\
 ** Description
 *** Steps
 **** . Authenticated user navigates to food-entry tab.
