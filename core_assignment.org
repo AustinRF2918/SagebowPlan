@@ -1,12 +1,19 @@
 * Sagebow Application Diagrams And Displays
 ** Use Cases
 *** Goal
-   Identify the main use cases including actors.
+    Identify the main use cases including actors.
+*** Content
+    This is already included in the previous Sagebow documentation, all
+    that must be done is modifying it to have similar stylization to the
+    new documentation.
 
 ** Sequence Diagrams
 *** Goal
-   Describe the different sequence diagrams that can occur for at least 
-   three use cases.
+    Describe the different sequence diagrams that can occur for at least 
+    three use cases.
+*** Content
+
+    
    
 ** Class Diagrams
 *** Goal
