@@ -3,17 +3,18 @@
 *** Goal
     Identify the main use cases including actors.
 *** Content
-    This is already included in the previous Sagebow documentation, all
-    that must be done is modifying it to have similar stylization to the
-    new documentation.
+    See: use_cases.org
 
 ** Sequence Diagrams
 *** Goal
     Describe the different sequence diagrams that can occur for at least 
     three use cases.
 *** Content
-
-    
+    See: use_cases.org: I provide rudimentary sequence diagrams that use
+    branching syntax with .s, this is visible in every use case's description.
+    Minor modifications would be needed to convert these to various 
+    sequence diagrams: specifically, editing them for each possible 
+    branch.
    
 ** Class Diagrams
 *** Goal
