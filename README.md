@@ -17,3 +17,7 @@ Planning of various aspects of the Sagebow project for CIS376 at University of M
 ## File Structures
 ### core_assignment.org
 - Provides general planning for assignment one's diagrams and powerpoints.
+### use_cases.org
+- Provides use cases that must have charts (use case diagrams) made.
+### sequence.org
+- Provides sequence descriptions that must have charts (sequence diagrams) made.
