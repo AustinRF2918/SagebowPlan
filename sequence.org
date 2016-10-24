@@ -1,3 +1,4 @@
-* Sequence Diagrams For Sagebow
-** Sequence Diagram A 
-*** Use-case
+* Not being used!
+** See "use_cases.org" for generic sequence diagrams.
+   All that must be done to convert these it taking the possible
+   splits in the paths and expressing them.

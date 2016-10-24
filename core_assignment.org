@@ -1,4 +1,4 @@
-* Sagebow Application Diagrams And Displays
+* [#B] Sagebow Application Diagrams And Displays
 ** Use Cases
 *** Goal
     Identify the main use cases including actors.
@@ -18,9 +18,11 @@
    
 ** Class Diagrams
 *** Goal
-   Provide the design class diagrams of the project by giving the 
-   snapchats of the artifacts with descriptions (Each main 
-   class should be described)
+    Provide the design class diagrams of the project by giving the 
+    snapchats of the artifacts with descriptions (Each main 
+    class should be described)
+*** Content
+    See class_schemes.org
    
 ** Gantt Chart
 *** Goal 

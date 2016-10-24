@@ -24,3 +24,6 @@ Planning of various aspects of the Sagebow project for CIS376 at University of M
 
 ### sequence.org
 - Provides sequence descriptions that must have charts (sequence diagrams) made.
+
+### class_schemes.org
+- Provides schemas of all of the classes that I have thought of so far in the application.
