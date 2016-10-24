@@ -1,4 +1,4 @@
-* [#B] Sagebow Application Diagrams And Displays
+* Sagebow Application Diagrams And Displays
 ** Use Cases
 *** TODO Goal
     Identify the main use cases including actors.
