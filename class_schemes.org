@@ -1,0 +1,317 @@
+* Class 1
+** Name Of Class
+   User Model
+** Class Type
+   Back-end
+** Links to
+   *composes*: Consumption event
+   NodeJS and Redis server.
+** Description
+   This is the user model: It is an idiomatic data model (which can be thought of as a 
+   template for making data with fields) that in essence implements no methods: the 
+   back-end and front-end instead interact with each other a modify the user object.
+** Fields
+*** Public
+    height: 64 Bit Floating Point *Will be made private via module pattern*
+    gender: String
+    username: String
+    password: String
+    bodyWeight: 64 Bit Floating Point (JS uses these by default)
+    bmi: 64 Bit Floating Point 
+    dailyCalories: 64 Bit Floating Point 
+    diet: String
+    consumption: Array of ConsumptionEvents
+    foods: Array of Strings
+*** Private
+    *None.*
+    
+* Class 2
+** Name Of Class
+   Consumption Event
+** Class Type
+   Back-end
+** Links To
+   User Model
+** Description
+   This is the consumption event  model: It stores multiple macronutrients and computed
+   calories from such, as well as a name and a timestamp. These are then pointed to by
+   certain user objects to represent composition
+** Fields
+*** Public
+    calories: 64 Bit Floating Point
+    carbs: 64 Bit Floating Point
+    protein: 64 Bit Floating Point
+    fats: 64 Bit Floating Point
+    name: String
+    timestamp: DateTime Object (Standard Library)
+*** Private
+    *None.*
+
+* Class 3
+** Name Of Class
+   Modal
+** Class Type
+   Front-end
+** Links To
+   Sagebow Authenticated Controller
+   Sagebow Unauthenticated Controller
+   JavaScript DOM
+** Description
+   This is a modal that can be dynamically rendered at any time on the 
+   front-end: To do so, often a message is send as either JSON or an 
+   error code from the back-end to the front-end after some action, when
+   the front-end receives such an event, we call the modal windows 
+   render function.
+** Fields
+*** Public
+    void show()
+    void hide()
+*** Private
+    header: JQuery object *Will be made private via module pattern*
+    message: JQuery object *Will be made private via module pattern*
+    button: JQuery object *Will be made private via module pattern*
+    el: JQuery object *Will be made private via module pattern*
+
+* Class 3
+** Name Of Class
+   Dropdown
+** Class Type
+   Front-end
+** Links To
+   Sagebow Authenticated Controller
+   Sagebow Unauthenticated Controller
+   JavaScript DOM
+** Description
+   This is a dropdown: It actually uses a dynamic render on page load,
+   which takes all HTML5 dropdowns, which are very ugly, and replaces 
+   it with these things equivalent syntax. It is documented in the 
+   dropdown-generator.js file.
+** Fields
+*** Public
+    void blur()
+    void generateBinding()
+    void setMode(mode: String)
+    void pushItemSelector(selector: String)
+*** Private
+    localBtnClassName: String
+    localDropdownClassName: String
+    isActive: bool
+    mode: String
+
+* Class 4
+** Name Of Class
+   Graph
+** Class Type
+   Front-end
+** Links To
+   Sagebow Authenticated Controller
+** Description
+   Currently this is a group of functions with one data class, it will
+   be refactored to be both more module, and have an easier to use API 
+   so that we can easily create other graphs.
+** Fields
+*** Public
+    void generateBinding()
+    void setMode(mode: String)
+    void pushItemSelector(selector: String)
+*** Private
+    el: JQuery object (*Must be created*)
+    width: 64 Bit Floating Point
+    height: 64 Bit Floating Point
+    backgroundColor: String
+    borderColor: String
+    borderWidth: String
+    f64 extractMetric(key: String, unit: String)
+
+* Class 5
+** Name Of Class
+   Bar Graph (Subclass of Graph)
+** Class Type
+   Front-end
+** Links To
+   Sagebow Authenticated Controller
+** Description
+   See previous description.
+** Fields
+*** Public
+    void render()
+*** Private
+    data: HashMap of DateTime objects and 64 Bit Floating Points
+
+* Class 6
+** Name Of Class
+   Pie Graph (Subclass of Graph)
+** Class Type
+   Front-end
+** Links To
+   Sagebow Authenticated Controller
+** Description
+   See previous description.
+** Fields
+*** Public
+    void render()
+*** Private
+    data: Array of 64 Bit Floating Points (*May be refactored to take FNR (class 8)*)
+
+* Class 7
+** Name Of Class
+   Diet Nutrient Ratio
+** Class Type
+   Front-end
+** Links To
+   Front-end generated user goal (Possibly pulled from back-end). 
+** Description
+   This is a simple data class that is used as a way of storing
+   nutrient data from the API. It currently has 3 public variables:
+   proteins, fats, and carbs. I would suggest, however, because multiple
+   methods exist that do functions upon this structure, turning it into
+   an OO based data structure.
+** Fields
+*** Public
+*** Private
+    calories: 64 Bit Floating Point *Will be made private via module pattern*
+    proteins: 64 Bit Floating Point *Will be made private via module pattern*
+    carbs: 64 Bit Floating Point *Will be made private via module pattern*
+    fats: 64 Bit Floating Point *Will be made private via module pattern*
+
+* Class 8
+** Name Of Class
+   Food Nutrient Ratio
+** Class Type
+   Front-end
+** Links To
+   Front-end generated food entry (Possibly pulled from back-end). 
+** Description
+   This is a simple data class that is used as a way of storing
+   nutrient data from the API. It currently has 3 public variables:
+   proteins, fats, and carbs. I would suggest, however, because multiple
+   methods exist that do functions upon this structure, turning it into
+   an OO based data structure.
+** Fields
+*** Public
+    f64 calories() 
+    f64 compute_fitness(user: DietNutrientRatio)
+*** Private
+    proteins: 64 Bit Floating Point *Will be made private via module pattern*
+    carbs: 64 Bit Floating Point *Will be made private via module pattern*
+    fats: 64 Bit Floating Point *Will be made private via module pattern*
+
+* Class 9
+** Name Of Class
+   User
+** Class Type
+   Front-end
+** Links to
+   Sagebow Authenticated Controller
+** Description
+   This is an as of yet unimplemented user object that would exist on the front-end.
+   It is essentially a clone of the backend user model, but instead uses an OO pattern
+   that would make it easy to send in and out of methods and do computations with.
+   Because it is not scalable to constantly send consumption event arrays and other
+   large chunks of data, we do it lazily as we need it (such as when pulling information
+   to charts) and we could also have the ability to cache this information in our 
+   controllers.
+** Fields
+*** Public
+    &[consumptionEvents] consumptionEvents(lower: DateTime, upper: DateTime)
+    f64 calculateBMR()
+    f64 calculateBMI()
+    f64 calculateDailyCalories()
+*** Private
+    gender: String *Will be made private via module pattern*
+    username: String *Will be made private via module pattern*
+    password: String *Will be made private via module pattern*
+    bodyWeight: 64 Bit Floating Point (JS uses these by default) *Will be made private via module pattern*
+    bmi: 64 Bit Floating Point  *Will be made private via module pattern*
+    dailyCalories: 64 Bit Floating Point *Will be made private via module pattern*
+    height: 64 Bit Floating Point *Will be made private via module pattern*
+    diet: String *Will be made private via module pattern*
+    f64 heightInInches()
+
+* Class 10
+** Name Of Class
+   Sagebow Authenticated Model
+** Class Type
+   Front-end
+** Links to
+   Application Controller
+   Sagebow Backend via Ajaxx/API.
+** Description
+   This is the authenticated model that gets constructed as the user navigates 
+   through various front-end pages. It calls from the back-end various information
+   which it then routes to the Sagebow controller object, which itself can then
+   be called from various components including graphs and our User object. any 
+   changes performed on represented data we perculate upwards back to this model
+   and then be synced with the database upstream.
+** Fields
+*** Public
+    JavaScript Object pushObject(JavaScript object)
+    Javascript Object pullObject(String)
+*** Private
+    apiEndpointMap: HashMap<String, Object>
+
+* Class 11
+** Name Of Class
+   Sagebow Unauthenticated Model
+** Class Type
+   Front-end
+** Links to
+   Login Controller
+   Sagebow Backend via Ajaxx/API.
+** Description
+   This is the unauthenticated model that gets constructed as the user navigates 
+   through the unauthenticated portions of the app: Its functionality is very 
+   close to the authenticated model, but is much simpler: When pushing an obj we
+   get a status code back possibly, and in this case we can render the the user
+   various problems, such as login difficulties, etc through the Login controller.
+** Fields
+*** Public
+    JavaScript Object pushObject(JavaScript object)
+    Javascript Object pullObject(String)
+*** Private
+    apiEndpointMap: HashMap<String, Object>
+
+* Class 12
+** Name Of Class
+   Application Controller
+** Class Type
+   Front-end
+** Links to
+   SagebowAuthenticatedModel
+   Any JavaScript object which implements the send and recieve trait.
+** Description
+   This is a controller (which is well known in MVC documentation). It controls the 
+   dispatching of various parts of data to its children and lets them handle information
+   and also send messages upwards, as well as performing other, more simple functions
+   that pertain to the application but do not neccessarily have a coupled function.
+** Fields
+*** Public
+    notifyModel(JavaScript object)
+    notifyChild(JavaScript object)
+    handle(JavaScript object)
+*** Private
+    SagebowAuthenticatedModel model
+    &[JavaScript object] children
+
+* Class 12
+** Name Of Class
+   Login Controller
+** Class Type
+   Front-end
+** Links to
+   SagebowUnauthenticatedModel
+   Any JavaScript object which implements the send and recieve trait.
+
+** Description
+   This is a controller (which is well known in MVC documentation). It controls the 
+   dispatching of various parts of data to its children and lets them handle information
+   and also send messages upwards, as well as performing other, more simple functions
+   that pertain to the application but do not neccessarily have a coupled function.
+** Fields
+*** Public
+    notifyModel(JavaScript object)
+    notifyChild(JavaScript object)
+    handle(JavaScript object)
+*** Private
+    SagebowUnauthenticatedModel model
+    &[JavaScript object] children
