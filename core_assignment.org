@@ -5,7 +5,7 @@
 *** DONE Content
     See: use_cases.org
 
-** DONE Sequence Diagrams
+** Sequence Diagrams
 *** TODO Goal
     Describe the different sequence diagrams that can occur for at least 
     three use cases.
