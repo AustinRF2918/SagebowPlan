@@ -1,15 +1,15 @@
 * [#B] Sagebow Application Diagrams And Displays
 ** Use Cases
-*** Goal
+*** TODO Goal
     Identify the main use cases including actors.
-*** Content
+*** DONE Content
     See: use_cases.org
 
-** Sequence Diagrams
-*** Goal
+** DONE Sequence Diagrams
+*** TODO Goal
     Describe the different sequence diagrams that can occur for at least 
     three use cases.
-*** Content
+*** DONE Content
     See: use_cases.org: I provide rudimentary sequence diagrams that use
     branching syntax with .s, this is visible in every use case's description.
     Minor modifications would be needed to convert these to various 
@@ -17,20 +17,24 @@
     branch.
    
 ** Class Diagrams
-*** Goal
+*** TODO Goal
     Provide the design class diagrams of the project by giving the 
     snapchats of the artifacts with descriptions (Each main 
     class should be described)
-*** Content
+*** DONE Content
     See class_schemes.org
    
 ** Gantt Chart
-*** Goal 
+*** TODO Goal 
    Provide the Gantt chart including the different project-steps.
    (With deadlines).
+*** TODO Content
+    Does not exist.
 
 ** Presentation
-*** Goal 
+*** TODO Goal 
    Prepare a presentation (slides) of 15 minutes to give an overview
    of our projects including the above diagrams. The group members
    will present slides during the lecture of 10/26/2016.
+*** TODO Content
+    Does not exist.
