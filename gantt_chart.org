@@ -3,7 +3,7 @@
    Group analysis Of Sagebow source code.
 ** Description
    Because Sagebow was originally developed in CIS375 with a group only
-   containing one member of the current group, it will be quite neccessary
+   containing one member of the current group, it will be quite necessary
    to go through the previously created source code of the application and
    explain its functionality to everybody.
 ** Time Duration
@@ -13,7 +13,7 @@
 ** Name Of Event
    Brainstorm of architectural change on Sagebow.
 ** Description
-   It will be neccessary before beginning the change of source code to
+   It will be necessary before beginning the change of source code to
    determine with the group how we should go about re-engineering every
    class and making an easy to use internal API so that the application
    uses tried and true design patterns, as well as being extremely 
@@ -29,7 +29,7 @@
    test suite that will be ran in Mocha upon each unit of the system.
    Once all test cases are determined, they will be turned into a real
    test suite that we can run as we develop the new API, which will 
-   allow incredible refactorization of code. 
+   allow incredible re-factorization of code. 
 ** Time Duration
    8 Days
 
@@ -49,11 +49,11 @@
 ** Name Of Event
    Brainstorm of test cases for back-end.
 ** Description
-   Sagebows backend, although fairly simple, still will need a testable 
-   private API so that we can test it as we refactor later, so we will
+   Sagebow's back-end, although fairly simple, still will need a testable 
+   private API so that we can test it as we re-factor later, so we will
    create a theoretical test suite for Sagebow here. As with the front-end,
    once these test cases are developed, we will turn them into real code
-   that we can run as we refactor the back-end.
+   that we can run as we re-factor the back-end.
 ** Time Duration
    4 Days
 
@@ -63,7 +63,7 @@
 ** Description
    Because the back-end is a fairly simple interface for a database and 
    proxy to the national food database API, it does not require a full
-   schema rewrite. Instead, we will seperate our modules into idiomatic,
+   schema rewrite. Instead, we will separate our modules into idiomatic,
    Rails style components that will make it easier to test our back-end
 ** Time Duration
    6 Days
