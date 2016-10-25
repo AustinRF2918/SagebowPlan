@@ -273,7 +273,7 @@
 
 * Class 12
 ** Name Of Class
-   Application Controller
+   Sagebow Authenticated Controller
 ** Class Type
    Front-end
 ** Links to
@@ -295,7 +295,7 @@
 
 * Class 12
 ** Name Of Class
-   Login Controller
+   Sagebow Unauthenticated Controller
 ** Class Type
    Front-end
 ** Links to
