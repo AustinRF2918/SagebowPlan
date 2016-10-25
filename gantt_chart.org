@@ -7,7 +7,7 @@
    to go through the previously created source code of the application and
    explain its functionality to everybody.
 ** Time Duration
-   4 Days
+   8 Days
 
 * Event 2
 ** Name Of Event
@@ -19,7 +19,7 @@
    uses tried and true design patterns, as well as being extremely 
    expandable.
 ** Time Duration
-   3 Days
+   6 Days
 
 * Event 3
 ** Name Of Event
@@ -31,7 +31,7 @@
    test suite that we can run as we develop the new API, which will 
    allow incredible refactorization of code. 
 ** Time Duration
-   4 Days
+   8 Days
 
 * Event 4
 ** Name Of Event
@@ -43,7 +43,7 @@
    also include creating yet more test cases as we develop, using the
    principle of creating test cases until something breaks.
 ** Time Duration
-   10 Days
+   20 Days
 
 * Event 5
 ** Name Of Event
@@ -55,7 +55,7 @@
    once these test cases are developed, we will turn them into real code
    that we can run as we refactor the back-end.
 ** Time Duration
-   2 Days
+   4 Days
 
 * Event 6
 ** Name Of Event
@@ -66,7 +66,7 @@
    schema rewrite. Instead, we will seperate our modules into idiomatic,
    Rails style components that will make it easier to test our back-end
 ** Time Duration
-   3 Days
+   6 Days
 
 * Event 7
 ** Name Of Event
@@ -78,5 +78,5 @@
    and send messages to developers regarding issues. Developers themselves
    may also find issues and fix them.
 ** Time Duration
-   8 Days
+   16 Days
 
