@@ -12,7 +12,7 @@
    back-end and front-end instead interact with each other a modify the user object.
 ** Fields
 *** Public
-***** height: 64 Bit Floating Point *Will be made private via module pattern*
+**** height: 64 Bit Floating Point *Will be made private via module pattern*
 ***** gender: String
 ***** username: String
 ***** password: String

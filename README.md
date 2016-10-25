@@ -27,3 +27,6 @@ Planning of various aspects of the Sagebow project for CIS376 at University of M
 
 ### class_schemes.org
 - Provides schemas of all of the classes that I have thought of so far in the application.
+
+### gantt_chart.org
+- Provides time scheme for all refactoring, test generation, etc that will be developed.

@@ -1,0 +1,82 @@
+* Event 1
+** Name Of Event
+   Group analysis Of Sagebow source code.
+** Description
+   Because Sagebow was originally developed in CIS375 with a group only
+   containing one member of the current group, it will be quite neccessary
+   to go through the previously created source code of the application and
+   explain its functionality to everybody.
+** Time Duration
+   4 Days
+
+* Event 2
+** Name Of Event
+   Brainstorm of architectural change on Sagebow.
+** Description
+   It will be neccessary before beginning the change of source code to
+   determine with the group how we should go about re-engineering every
+   class and making an easy to use internal API so that the application
+   uses tried and true design patterns, as well as being extremely 
+   expandable.
+** Time Duration
+   3 Days
+
+* Event 3
+** Name Of Event
+   Brainstorm of test cases and suites for new architecture.
+** Description
+   Once the architectural changes are determined, we will develop a 
+   test suite that will be ran in Mocha upon each unit of the system.
+   Once all test cases are determined, they will be turned into a real
+   test suite that we can run as we develop the new API, which will 
+   allow incredible refactorization of code. 
+** Time Duration
+   4 Days
+
+* Event 4
+** Name Of Event
+   Development of new private API on front-end.
+** Description
+   Once we have a test suite and a clear-cut private API specification,
+   it will now be up to our team to turn said model into JavaScript.
+   This will take quite a while compared to the other steps, and will
+   also include creating yet more test cases as we develop, using the
+   principle of creating test cases until something breaks.
+** Time Duration
+   10 Days
+
+* Event 5
+** Name Of Event
+   Brainstorm of test cases for back-end.
+** Description
+   Sagebows backend, although fairly simple, still will need a testable 
+   private API so that we can test it as we refactor later, so we will
+   create a theoretical test suite for Sagebow here. As with the front-end,
+   once these test cases are developed, we will turn them into real code
+   that we can run as we refactor the back-end.
+** Time Duration
+   2 Days
+
+* Event 6
+** Name Of Event
+   Modularization of back-end.
+** Description
+   Because the back-end is a fairly simple interface for a database and 
+   proxy to the national food database API, it does not require a full
+   schema rewrite. Instead, we will seperate our modules into idiomatic,
+   Rails style components that will make it easier to test our back-end
+** Time Duration
+   3 Days
+
+* Event 7
+** Name Of Event
+   Refactoring of various components.
+** Description
+   Once we have all the test cases and new specification ready for the 
+   private API, we will split up the team into code reviewers and 
+   refactoring developers. The reviewers will attempt to find anti-patterns
+   and send messages to developers regarding issues. Developers themselves
+   may also find issues and fix them.
+** Time Duration
+   8 Days
+
